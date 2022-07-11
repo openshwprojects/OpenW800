@@ -35,6 +35,11 @@
 			<locationURI>virtual:/virtual</locationURI>
 		</link>
 		<link>
+			<name>sharedAppContainer</name>
+			<type>2</type>
+			<locationURI>virtual:/virtual</locationURI>
+		</link>
+		<link>
 			<name>demo/console</name>
 			<type>2</type>
 			<locationURI>virtual:/virtual</locationURI>
@@ -306,6 +311,11 @@
 		</link>
 		<link>
 			<name>platform/sys</name>
+			<type>2</type>
+			<locationURI>virtual:/virtual</locationURI>
+		</link>
+		<link>
+			<name>sharedAppContainer/sharedApp</name>
 			<type>2</type>
 			<locationURI>virtual:/virtual</locationURI>
 		</link>
@@ -828,6 +838,216 @@
 			<name>platform/sys/wm_main.c</name>
 			<type>1</type>
 			<locationURI>PARENT-6-PROJECT_LOC/platform/sys/wm_main.c</locationURI>
+		</link>
+		<link>
+			<name>sharedAppContainer/sharedApp/cmd_channels.c</name>
+			<type>1</type>
+			<locationURI>PARENT-6-PROJECT_LOC/sharedAppContainer/sharedApp/src/cmnds/cmd_channels.c</locationURI>
+		</link>
+		<link>
+			<name>sharedAppContainer/sharedApp/cmd_eventHandlers.c</name>
+			<type>1</type>
+			<locationURI>PARENT-6-PROJECT_LOC/sharedAppContainer/sharedApp/src/cmnds/cmd_eventHandlers.c</locationURI>
+		</link>
+		<link>
+			<name>sharedAppContainer/sharedApp/cmd_local.h</name>
+			<type>1</type>
+			<locationURI>PARENT-6-PROJECT_LOC/sharedAppContainer/sharedApp/src/cmnds/cmd_local.h</locationURI>
+		</link>
+		<link>
+			<name>sharedAppContainer/sharedApp/cmd_main.c</name>
+			<type>1</type>
+			<locationURI>PARENT-6-PROJECT_LOC/sharedAppContainer/sharedApp/src/cmnds/cmd_main.c</locationURI>
+		</link>
+		<link>
+			<name>sharedAppContainer/sharedApp/cmd_newLEDDriver.c</name>
+			<type>1</type>
+			<locationURI>PARENT-6-PROJECT_LOC/sharedAppContainer/sharedApp/src/cmnds/cmd_newLEDDriver.c</locationURI>
+		</link>
+		<link>
+			<name>sharedAppContainer/sharedApp/cmd_public.h</name>
+			<type>1</type>
+			<locationURI>PARENT-6-PROJECT_LOC/sharedAppContainer/sharedApp/src/cmnds/cmd_public.h</locationURI>
+		</link>
+		<link>
+			<name>sharedAppContainer/sharedApp/cmd_repeatingEvents.c</name>
+			<type>1</type>
+			<locationURI>PARENT-6-PROJECT_LOC/sharedAppContainer/sharedApp/src/cmnds/cmd_repeatingEvents.c</locationURI>
+		</link>
+		<link>
+			<name>sharedAppContainer/sharedApp/cmd_tasmota.c</name>
+			<type>1</type>
+			<locationURI>PARENT-6-PROJECT_LOC/sharedAppContainer/sharedApp/src/cmnds/cmd_tasmota.c</locationURI>
+		</link>
+		<link>
+			<name>sharedAppContainer/sharedApp/cmd_test.c</name>
+			<type>1</type>
+			<locationURI>PARENT-6-PROJECT_LOC/sharedAppContainer/sharedApp/src/cmnds/cmd_test.c</locationURI>
+		</link>
+		<link>
+			<name>sharedAppContainer/sharedApp/cmd_tokenizer.c</name>
+			<type>1</type>
+			<locationURI>PARENT-6-PROJECT_LOC/sharedAppContainer/sharedApp/src/cmnds/cmd_tokenizer.c</locationURI>
+		</link>
+		<link>
+			<name>sharedAppContainer/sharedApp/hal_adc_w800.c</name>
+			<type>1</type>
+			<locationURI>PARENT-6-PROJECT_LOC/sharedAppContainer/sharedApp/src/hal/w800/hal_adc_w800.c</locationURI>
+		</link>
+		<link>
+			<name>sharedAppContainer/sharedApp/hal_flashConfig_w800.c</name>
+			<type>1</type>
+			<locationURI>PARENT-6-PROJECT_LOC/sharedAppContainer/sharedApp/src/hal/w800/hal_flashConfig_w800.c</locationURI>
+		</link>
+		<link>
+			<name>sharedAppContainer/sharedApp/hal_flashVars_w800.c</name>
+			<type>1</type>
+			<locationURI>PARENT-6-PROJECT_LOC/sharedAppContainer/sharedApp/src/hal/w800/hal_flashVars_w800.c</locationURI>
+		</link>
+		<link>
+			<name>sharedAppContainer/sharedApp/hal_generic_w800.c</name>
+			<type>1</type>
+			<locationURI>PARENT-6-PROJECT_LOC/sharedAppContainer/sharedApp/src/hal/w800/hal_generic_w800.c</locationURI>
+		</link>
+		<link>
+			<name>sharedAppContainer/sharedApp/hal_main_w800.c</name>
+			<type>1</type>
+			<locationURI>PARENT-6-PROJECT_LOC/sharedAppContainer/sharedApp/src/hal/w800/hal_main_w800.c</locationURI>
+		</link>
+		<link>
+			<name>sharedAppContainer/sharedApp/hal_pins_w800.c</name>
+			<type>1</type>
+			<locationURI>PARENT-6-PROJECT_LOC/sharedAppContainer/sharedApp/src/hal/w800/hal_pins_w800.c</locationURI>
+		</link>
+		<link>
+			<name>sharedAppContainer/sharedApp/hal_wifi_w800.c</name>
+			<type>1</type>
+			<locationURI>PARENT-6-PROJECT_LOC/sharedAppContainer/sharedApp/src/hal/w800/hal_wifi_w800.c</locationURI>
+		</link>
+		<link>
+			<name>sharedAppContainer/sharedApp/http_fns.c</name>
+			<type>1</type>
+			<locationURI>PARENT-6-PROJECT_LOC/sharedAppContainer/sharedApp/src/httpserver/http_fns.c</locationURI>
+		</link>
+		<link>
+			<name>sharedAppContainer/sharedApp/http_fns.h</name>
+			<type>1</type>
+			<locationURI>PARENT-6-PROJECT_LOC/sharedAppContainer/sharedApp/src/httpserver/http_fns.h</locationURI>
+		</link>
+		<link>
+			<name>sharedAppContainer/sharedApp/http_tcp_server.c</name>
+			<type>1</type>
+			<locationURI>PARENT-6-PROJECT_LOC/sharedAppContainer/sharedApp/src/httpserver/http_tcp_server.c</locationURI>
+		</link>
+		<link>
+			<name>sharedAppContainer/sharedApp/http_tcp_server.h</name>
+			<type>1</type>
+			<locationURI>PARENT-6-PROJECT_LOC/sharedAppContainer/sharedApp/src/httpserver/http_tcp_server.h</locationURI>
+		</link>
+		<link>
+			<name>sharedAppContainer/sharedApp/jsmn.c</name>
+			<type>1</type>
+			<locationURI>PARENT-6-PROJECT_LOC/sharedAppContainer/sharedApp/src/jsmn/jsmn.c</locationURI>
+		</link>
+		<link>
+			<name>sharedAppContainer/sharedApp/jsmn.h</name>
+			<type>1</type>
+			<locationURI>PARENT-6-PROJECT_LOC/sharedAppContainer/sharedApp/src/jsmn/jsmn.h</locationURI>
+		</link>
+		<link>
+			<name>sharedAppContainer/sharedApp/jsmn_h.h</name>
+			<type>1</type>
+			<locationURI>PARENT-6-PROJECT_LOC/sharedAppContainer/sharedApp/src/jsmn/jsmn_h.h</locationURI>
+		</link>
+		<link>
+			<name>sharedAppContainer/sharedApp/logging.c</name>
+			<type>1</type>
+			<locationURI>PARENT-6-PROJECT_LOC/sharedAppContainer/sharedApp/src/logging/logging.c</locationURI>
+		</link>
+		<link>
+			<name>sharedAppContainer/sharedApp/new_builtin_devices.c</name>
+			<type>1</type>
+			<locationURI>PARENT-6-PROJECT_LOC/sharedAppContainer/sharedApp/src/new_builtin_devices.c</locationURI>
+		</link>
+		<link>
+			<name>sharedAppContainer/sharedApp/new_cfg.c</name>
+			<type>1</type>
+			<locationURI>PARENT-6-PROJECT_LOC/sharedAppContainer/sharedApp/src/new_cfg.c</locationURI>
+		</link>
+		<link>
+			<name>sharedAppContainer/sharedApp/new_common.c</name>
+			<type>1</type>
+			<locationURI>PARENT-6-PROJECT_LOC/sharedAppContainer/sharedApp/src/new_common.c</locationURI>
+		</link>
+		<link>
+			<name>sharedAppContainer/sharedApp/new_common.h</name>
+			<type>1</type>
+			<locationURI>PARENT-6-PROJECT_LOC/sharedAppContainer/sharedApp/src/new_common.h</locationURI>
+		</link>
+		<link>
+			<name>sharedAppContainer/sharedApp/new_http.c</name>
+			<type>1</type>
+			<locationURI>PARENT-6-PROJECT_LOC/sharedAppContainer/sharedApp/src/httpserver/new_http.c</locationURI>
+		</link>
+		<link>
+			<name>sharedAppContainer/sharedApp/new_http.h</name>
+			<type>1</type>
+			<locationURI>PARENT-6-PROJECT_LOC/sharedAppContainer/sharedApp/src/httpserver/new_http.h</locationURI>
+		</link>
+		<link>
+			<name>sharedAppContainer/sharedApp/new_mqtt.c</name>
+			<type>1</type>
+			<locationURI>PARENT-6-PROJECT_LOC/sharedAppContainer/sharedApp/src/mqtt/new_mqtt.c</locationURI>
+		</link>
+		<link>
+			<name>sharedAppContainer/sharedApp/new_mqtt.h</name>
+			<type>1</type>
+			<locationURI>PARENT-6-PROJECT_LOC/sharedAppContainer/sharedApp/src/mqtt/new_mqtt.h</locationURI>
+		</link>
+		<link>
+			<name>sharedAppContainer/sharedApp/new_ping.c</name>
+			<type>1</type>
+			<locationURI>PARENT-6-PROJECT_LOC/sharedAppContainer/sharedApp/src/new_ping.c</locationURI>
+		</link>
+		<link>
+			<name>sharedAppContainer/sharedApp/new_pins.c</name>
+			<type>1</type>
+			<locationURI>PARENT-6-PROJECT_LOC/sharedAppContainer/sharedApp/src/new_pins.c</locationURI>
+		</link>
+		<link>
+			<name>sharedAppContainer/sharedApp/new_pins.h</name>
+			<type>1</type>
+			<locationURI>PARENT-6-PROJECT_LOC/sharedAppContainer/sharedApp/src/new_pins.h</locationURI>
+		</link>
+		<link>
+			<name>sharedAppContainer/sharedApp/rest_interface.c</name>
+			<type>1</type>
+			<locationURI>PARENT-6-PROJECT_LOC/sharedAppContainer/sharedApp/src/httpserver/rest_interface.c</locationURI>
+		</link>
+		<link>
+			<name>sharedAppContainer/sharedApp/rest_interface.h</name>
+			<type>1</type>
+			<locationURI>PARENT-6-PROJECT_LOC/sharedAppContainer/sharedApp/src/httpserver/rest_interface.h</locationURI>
+		</link>
+		<link>
+			<name>sharedAppContainer/sharedApp/rgb2hsv.c</name>
+			<type>1</type>
+			<locationURI>PARENT-6-PROJECT_LOC/sharedAppContainer/sharedApp/src/rgb2hsv.c</locationURI>
+		</link>
+		<link>
+			<name>sharedAppContainer/sharedApp/rgb2hsv.h</name>
+			<type>1</type>
+			<locationURI>PARENT-6-PROJECT_LOC/sharedAppContainer/sharedApp/src/rgb2hsv.h</locationURI>
+		</link>
+		<link>
+			<name>sharedAppContainer/sharedApp/tiny_crc8.c</name>
+			<type>1</type>
+			<locationURI>PARENT-6-PROJECT_LOC/sharedAppContainer/sharedApp/src/tiny_crc8.c</locationURI>
+		</link>
+		<link>
+			<name>sharedAppContainer/sharedApp/user_main.c</name>
+			<type>1</type>
+			<locationURI>PARENT-6-PROJECT_LOC/sharedAppContainer/sharedApp/src/user_main.c</locationURI>
 		</link>
 		<link>
 			<name>src/app/Makefile</name>
@@ -1930,6 +2150,11 @@
 			<locationURI>virtual:/virtual</locationURI>
 		</link>
 		<link>
+			<name>src/network/lwip2.0.3/apps</name>
+			<type>2</type>
+			<locationURI>virtual:/virtual</locationURI>
+		</link>
+		<link>
 			<name>src/network/lwip2.0.3/core</name>
 			<type>2</type>
 			<locationURI>virtual:/virtual</locationURI>
@@ -2843,6 +3068,11 @@
 			<name>src/network/lwip2.0.3/api/tcpip.c</name>
 			<type>1</type>
 			<locationURI>PARENT-6-PROJECT_LOC/src/network/lwip2.0.3/api/tcpip.c</locationURI>
+		</link>
+		<link>
+			<name>src/network/lwip2.0.3/apps/mqtt.c</name>
+			<type>1</type>
+			<locationURI>PARENT-6-PROJECT_LOC/src/network/lwip2.0.3/apps/mqtt/mqtt.c</locationURI>
 		</link>
 		<link>
 			<name>src/network/lwip2.0.3/core/alg.c</name>

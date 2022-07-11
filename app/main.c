@@ -17,6 +17,7 @@ void UserMain(void)
 {
 	printf("\n user task \n");
 
+	user_main();
 #if DEMO_CONSOLE
 	CreateDemoTask();
 #endif
