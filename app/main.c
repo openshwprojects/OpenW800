@@ -12,7 +12,7 @@
 * Date : 2014-6-14
 *****************************************************************************/ 
 #include "wm_include.h"
-
+extern void user_main();
 void UserMain(void)
 {
 	printf("\n user task \n");
@@ -21,6 +21,6 @@ void UserMain(void)
 #if DEMO_CONSOLE
 	CreateDemoTask();
 #endif
-//ÓÃ»§×Ô¼ºµÄtask
+//ï¿½Ã»ï¿½ï¿½Ô¼ï¿½ï¿½ï¿½task
 }
 
