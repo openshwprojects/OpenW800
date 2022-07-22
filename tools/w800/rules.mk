@@ -150,7 +150,7 @@ endif
 endif
 
 $(OBJODIR)/$(notdir $(shell pwd))/%.o: %.c
-	@mkdir -p $(OBJODIR)/$(notdir $(shell pwd))
+	@mkdir -p $(dir $(@))
 	$(CC) $(if $(findstring $<,$(DSRCS)),$(DFLAGS),$(CFLAGS)) $(COPTS_$(*F)) $(INCLUDES) $(CMACRO) -c "$<" -o "$@" -MMD -MD -MF "$(@:$(OBJODIR)/$(notdir $(shell pwd))/%.o=$(OBJODIR)/$(notdir $(shell pwd))/%.o.d)" -MT "$(@)"
 
 $(OBJODIR)/$(notdir $(shell pwd))/%.o: %.S
