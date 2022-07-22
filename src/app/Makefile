@@ -12,7 +12,6 @@ COMPONENTS_libapp = cjson/libcjson$(LIB_EXT) 	\
 					libwebsockets-2.1-stable/libwebsockets$(LIB_EXT) 	\
 					matrixssl/libmatrixssl$(LIB_EXT) 	\
 					mdns/libmdns$(LIB_EXT) 	\
-					mqtt/libmqtt$(LIB_EXT) 	\
 					ntp/libntp$(LIB_EXT) 	\
 					oneshotconfig/liboneshotconfig$(LIB_EXT) 	\
 					ota/libota$(LIB_EXT) 	\
