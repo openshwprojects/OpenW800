@@ -3,8 +3,7 @@ sinclude $(TOP_DIR)/tools/w800/conf.mk
 
 ifndef PDIR
 GEN_LIBS = libapp$(LIB_EXT)
-COMPONENTS_libapp = cjson/libcjson$(LIB_EXT) 	\
-					dhcpserver/libdhcpserver$(LIB_EXT) 	\
+COMPONENTS_libapp = dhcpserver/libdhcpserver$(LIB_EXT) 	\
 					dnsserver/libdnsserver$(LIB_EXT) 	\
 					httpclient/libhttpclient$(LIB_EXT) 	\
 					iperf/libiperf$(LIB_EXT) 	\
