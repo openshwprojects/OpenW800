@@ -34,6 +34,7 @@ CSRCS += $(_SHARED_APP)/httpserver/rest_interface.c
 CSRCS += $(_SHARED_APP)/logging/logging.c
 CSRCS += $(_SHARED_APP)/jsmn/jsmn.c
 CSRCS += $(_SHARED_APP)/mqtt/new_mqtt.c
+CSRCS += $(_SHARED_APP)/mqtt/new_mqtt_deduper.c
 CSRCS += $(_SHARED_APP)/new_builtin_devices.c
 CSRCS += $(_SHARED_APP)/new_cfg.c
 CSRCS += $(_SHARED_APP)/new_common.c
