@@ -13,6 +13,7 @@ CSRCS += $(_SHARED_APP)/cmnds/cmd_channels.c
 CSRCS += $(_SHARED_APP)/cmnds/cmd_eventHandlers.c
 CSRCS += $(_SHARED_APP)/cmnds/cmd_main.c
 CSRCS += $(_SHARED_APP)/cmnds/cmd_newLEDDriver.c
+CSRCS += $(_SHARED_APP)/cmnds/cmd_newLEDDriver_colors.c
 CSRCS += $(_SHARED_APP)/cmnds/cmd_repeatingEvents.c
 CSRCS += $(_SHARED_APP)/cmnds/cmd_tasmota.c
 CSRCS += $(_SHARED_APP)/cmnds/cmd_test.c
