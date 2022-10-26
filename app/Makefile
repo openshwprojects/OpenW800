@@ -18,6 +18,7 @@ CSRCS += $(_SHARED_APP)/cmnds/cmd_tasmota.c
 CSRCS += $(_SHARED_APP)/cmnds/cmd_test.c
 CSRCS += $(_SHARED_APP)/cmnds/cmd_tcp.c
 CSRCS += $(_SHARED_APP)/cmnds/cmd_tokenizer.c
+CSRCS += $(_SHARED_APP)/cmnds/cmd_if.c
 CSRCS += $(_SHARED_APP)/cJSON/cJSON.c
 CSRCS += $(_SHARED_APP)/hal/w800/hal_adc_w800.c
 CSRCS += $(_SHARED_APP)/hal/w800/hal_flashConfig_w800.c
