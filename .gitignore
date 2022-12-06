@@ -1,0 +1,4 @@
+bin/*
+sharedAppContainer/*
+tools/w800/wm_getver
+tools/w800/wm_tool

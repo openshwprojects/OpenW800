@@ -21,6 +21,5 @@ void UserMain(void)
 #if DEMO_CONSOLE
 	CreateDemoTask();
 #endif
-//�û��Լ���task
 }
 

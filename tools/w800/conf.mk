@@ -80,6 +80,7 @@ LIB_EXT = .a
 CCFLAGS := -Wall \
     -DTLS_CONFIG_CPU_XT804=1 \
     -DGCC_COMPILE=1 \
+    -DPLATFORM_W800=1 \
     -mcpu=ck804ef \
     $(optimization) \
     -std=gnu99 \
@@ -92,6 +93,7 @@ CCFLAGS := -Wall \
 ASMFLAGS := -Wall \
     -DTLS_CONFIG_CPU_XT804=1 \
     -DGCC_COMPILE=1 \
+    -DPLATFORM_W800=1 \
     -mcpu=ck804ef \
     $(optimization) \
     -std=gnu99 \
