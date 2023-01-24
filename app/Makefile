@@ -33,6 +33,7 @@ CSRCS += $(_SHARED_APP)/httpserver/http_fns.c
 CSRCS += $(_SHARED_APP)/httpserver/http_tcp_server.c
 CSRCS += $(_SHARED_APP)/httpserver/new_http.c
 CSRCS += $(_SHARED_APP)/httpserver/rest_interface.c
+CSRCS += $(_SHARED_APP)/httpserver/json_interface.c
 CSRCS += $(_SHARED_APP)/logging/logging.c
 CSRCS += $(_SHARED_APP)/jsmn/jsmn.c
 CSRCS += $(_SHARED_APP)/mqtt/new_mqtt.c
