@@ -17,6 +17,8 @@
 #include <termios.h>
 #include <sys/ioctl.h>
 #endif
+#include <sys/types.h>
+#include <sys/stat.h>
 
 #define WM_TOOL_PATH_MAX                      256
 #define WM_TOOL_ONCE_READ_LEN	              1024
@@ -4464,7 +4466,11 @@ static int wm_tool_xmodem_download(const char *image)
 	unsigned short crc_value;
 	unsigned char ack_id;
 	int sndlen;
-	int ret = -111;
+    int ret = -111;
+    struct stat fsb;
+    int state = 0;
+
+    stat(image, &fsb);
 
 	imgfp = fopen(image, "rb");
     if (!imgfp)
@@ -4479,7 +4485,7 @@ static int wm_tool_xmodem_download(const char *image)
 	retry_num = 0;
 
 	wm_tool_printf("start download.\r\n");
-	wm_tool_printf("0%% [");
+	wm_tool_printf("  0%% [");
 
     wm_tool_uart_clear();
 
@@ -4536,10 +4542,13 @@ static int wm_tool_xmodem_download(const char *image)
 	                {
 	                	WM_TOOL_DBG_PRINT("Ok!\r\n");
 
-	                	if (sndlen % 10240 == 0)
+                        if (state != (int)((sndlen * 100)/fsb.st_size))
                         {
-    						wm_tool_printf("#");
-						}
+                            state = (int)((sndlen * 100)/fsb.st_size);
+                            wm_tool_printf("\r%3i%% [", state);
+                            for (int i=0;i<(state/2);i++)
+                                wm_tool_printf("#");
+                        }
 	                }
 					else
 					{
@@ -4566,7 +4575,7 @@ static int wm_tool_xmodem_download(const char *image)
 
 	                WM_TOOL_DBG_PRINT("ok\r\n");
 
-	                wm_tool_printf("] 100%%\r\n");
+	                wm_tool_printf("]\r\n");
 
 	                wm_tool_printf("download completed.\r\n");
 
