@@ -56,9 +56,9 @@ INCLUDES += -I $(TOP_DIR)/src/wlan/driver
 INCLUDES += -I $(TOP_DIR)/src/wlan/supplicant
 
 INCLUDES += -I $(TOP_DIR)/src/bt/host/main
-#INCLUDES += -I $(TOP_DIR)/src/bt/host/include
-#INCLUDES += -I $(TOP_DIR)/src/bt/controller/modules/include
-#INCLUDES += -I $(TOP_DIR)/src/bt/controller/plf/xt804/src/build/btdm/reg/fw
+INCLUDES += -I $(TOP_DIR)/src/bt/host/include
+INCLUDES += -I $(TOP_DIR)/src/bt/controller/modules/include
+INCLUDES += -I $(TOP_DIR)/src/bt/controller/plf/xt804/src/build/btdm/reg/fw
 #INCLUDES += -I $(TOP_DIR)/src/bt/controller/plf/xt804/src/arch
 #INCLUDES += -I $(TOP_DIR)/src/bt/controller/ip/bt/inc/audio
 #INCLUDES += -I $(TOP_DIR)/src/bt/controller/ip/bt/inc/controller/include
