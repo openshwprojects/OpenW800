@@ -9,7 +9,7 @@ INCLUDES += -I $(TOP_DIR)/include/net
 INCLUDES += -I $(TOP_DIR)/include/os
 INCLUDES += -I $(TOP_DIR)/include/platform
 INCLUDES += -I $(TOP_DIR)/include/wifi
-INCLUDES += -I $(TOP_DIR)/include/bt
+#INCLUDES += -I $(TOP_DIR)/include/bt
 
 INCLUDES += -I $(TOP_DIR)/platform/common/crypto
 INCLUDES += -I $(TOP_DIR)/platform/common/crypto/digest
