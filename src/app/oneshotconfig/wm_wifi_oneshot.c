@@ -138,7 +138,7 @@ extern void tls_wl_plcp_start(void);
 
 
 #if TLS_CONFIG_BT
-#include "wm_bt_def.h"
+//#include "wm_bt_def.h"
 extern tls_bt_status_t wm_bt_wifi_cfg_init(void);
 extern tls_bt_status_t wm_bt_wifi_cfg_deinit(void);
 #endif
