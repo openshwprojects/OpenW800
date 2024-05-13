@@ -137,11 +137,11 @@ extern void tls_wl_plcp_stop(void);
 extern void tls_wl_plcp_start(void);
 
 
-#if TLS_CONFIG_BT
+//#if TLS_CONFIG_BT
 //#include "wm_bt_def.h"
-extern tls_bt_status_t wm_bt_wifi_cfg_init(void);
-extern tls_bt_status_t wm_bt_wifi_cfg_deinit(void);
-#endif
+//extern tls_bt_status_t wm_bt_wifi_cfg_init(void);
+//extern tls_bt_status_t wm_bt_wifi_cfg_deinit(void);
+//#endif
 
 #if (CONFIG_ONESHOT_MAC_FILTER || TLS_CONFIG_AP_MODE_ONESHOT)
 static __inline int tls_is_zero_ether_addr(const u8 *a)
@@ -1564,12 +1564,12 @@ void tls_wifi_start_oneshot(void)
 int tls_wifi_set_oneshot_flag(u8 flag)
 {
     bool enable = FALSE;
-#if TLS_CONFIG_BT
-	tls_bt_status_t status;
-    if (flag > 4)
-#else
-    if (flag > 3)
-#endif
+//#if TLS_CONFIG_BT
+//	tls_bt_status_t status;
+//    if (flag > 4)
+//#else
+//   if (flag > 3)
+//#endif
     {
         printf("net cfg mode not support\n");
         return -1;
@@ -1639,7 +1639,7 @@ int tls_wifi_set_oneshot_flag(u8 flag)
 			}
 #endif
 		}
-#if TLS_CONFIG_BT
+//#if TLS_CONFIG_BT
 		else if (4 == guconeshotflag)
 		{
 			status = wm_bt_wifi_cfg_deinit();
@@ -1660,7 +1660,7 @@ int tls_wifi_set_oneshot_flag(u8 flag)
                 return 0;
             }
 		}
-#endif
+//#endif
 		guconeshotflag = flag;
 		tls_wifi_set_listen_mode(0);
 		tls_oneshot_data_clear();
