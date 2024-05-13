@@ -55,7 +55,7 @@ INCLUDES += -I $(TOP_DIR)/demo
 INCLUDES += -I $(TOP_DIR)/src/wlan/driver
 INCLUDES += -I $(TOP_DIR)/src/wlan/supplicant
 
-#INCLUDES += -I $(TOP_DIR)/src/bt/host/main
+INCLUDES += -I $(TOP_DIR)/src/bt/host/main
 #INCLUDES += -I $(TOP_DIR)/src/bt/host/include
 #INCLUDES += -I $(TOP_DIR)/src/bt/controller/modules/include
 #INCLUDES += -I $(TOP_DIR)/src/bt/controller/plf/xt804/src/build/btdm/reg/fw
