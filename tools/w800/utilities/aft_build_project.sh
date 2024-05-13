@@ -6,6 +6,8 @@ code_encrypt=0
 sign_pubkey_src=0
 img_type=1
 zip_type=1
+run_img header=8010000
+run img_pos=8010400
 echo $ProjName
 if [ $prikey_sel -gt 0 ]
  then

@@ -638,7 +638,7 @@ int tls_fls_write(u32 addr, u8 *buf, u32 len)
     offaddr = addr & (INSIDE_FLS_BASE_ADDR - 1);			//Offset of 0X08000000
     secpos = offaddr / INSIDE_FLS_SECTOR_SIZE;				//Section addr
     secoff = (offaddr % INSIDE_FLS_SECTOR_SIZE);			//Offset in section
-    secremain = INSIDE_FLS_SECTOR_SIZE - secoff;    // ÉÈÇøÊ£Óà¿Õ¼ä´óÐ¡
+    secremain = INSIDE_FLS_SECTOR_SIZE - secoff;    // ï¿½ï¿½ï¿½ï¿½Ê£ï¿½ï¿½Õ¼ï¿½ï¿½Ð¡
     if(len <= secremain)
     {
         secremain = len;								//Not bigger with remain size in section
@@ -648,7 +648,7 @@ int tls_fls_write(u32 addr, u8 *buf, u32 len)
         flashRead(secpos * INSIDE_FLS_SECTOR_SIZE, cache, INSIDE_FLS_SECTOR_SIZE);
 
         eraseSector(secpos * INSIDE_FLS_SECTOR_SIZE);
-        for (i = 0; i < secremain; i++) // ¸´ÖÆ
+        for (i = 0; i < secremain; i++) // ï¿½ï¿½ï¿½ï¿½
         {
             cache[i + secoff] = buf[i];
         }
@@ -658,16 +658,16 @@ int tls_fls_write(u32 addr, u8 *buf, u32 len)
         }
         if(len == secremain)
         {
-            break;              // Ð´Èë½áÊøÁË
+            break;              // Ð´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
         }
-        else                    // Ð´ÈëÎ´½áÊø
+        else                    // Ð´ï¿½ï¿½Î´ï¿½ï¿½ï¿½ï¿½
         {
-            secpos++;           // ÉÈÇøµØÖ·Ôö1
-            secoff = 0;         // Æ«ÒÆÎ»ÖÃÎª0
-            buf += secremain;   // Ö¸ÕëÆ«ÒÆ
+            secpos++;           // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö·ï¿½ï¿½1
+            secoff = 0;         // Æ«ï¿½ï¿½Î»ï¿½ï¿½Îª0
+            buf += secremain;   // Ö¸ï¿½ï¿½Æ«ï¿½ï¿½
             len -= secremain;
             if(len > (INSIDE_FLS_SECTOR_SIZE))
-                secremain = INSIDE_FLS_SECTOR_SIZE; // ÏÂÒ»¸öÉÈÇø»¹ÊÇÐ´²»Íê
+                secremain = INSIDE_FLS_SECTOR_SIZE; // ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð´ï¿½ï¿½ï¿½ï¿½
             else
                 secremain = len;					//Next section will finish
         }
