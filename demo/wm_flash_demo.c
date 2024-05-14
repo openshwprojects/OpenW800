@@ -11,7 +11,7 @@
 #include <string.h>
 #include "wm_include.h"
 #include "wm_internal_flash.h"
-#include "wm_demo.h"
+//#include "wm_demo.h"
 
 #if DEMO_FLASH
 

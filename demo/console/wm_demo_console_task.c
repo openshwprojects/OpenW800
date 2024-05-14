@@ -9,7 +9,7 @@
 *****************************************************************************/
 #include <string.h>
 #include "wm_include.h"
-#include "wm_demo.h"
+//#include "wm_demo.h"
 
 #if DEMO_CONSOLE
 #include "wm_demo_console.h"
