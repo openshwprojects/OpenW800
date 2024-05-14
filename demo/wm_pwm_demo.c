@@ -16,7 +16,7 @@
 #include "wm_pwm.h"
 #include "wm_cpu.h"
 #include "wm_io.h"
-#include "wm_demo.h"
+//#include "wm_demo.h"
 #include "wm_regs.h"
 #include "wm_dma.h"
 #include "wm_gpio_afsel.h"

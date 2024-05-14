@@ -13,7 +13,7 @@
 *****************************************************************************/
 #include <string.h>
 #include "wm_include.h"
-#include "wm_demo.h"
+//#include "wm_demo.h"
 
 #if DEMO_SOFT_AP
 /*1)Add sta add callback function

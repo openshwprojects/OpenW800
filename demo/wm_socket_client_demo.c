@@ -10,7 +10,7 @@
 
 #include <string.h>
 #include "wm_include.h"
-#include "wm_demo.h"
+//#include "wm_demo.h"
 
 #if DEMO_STD_SOCKET_CLIENT
 #define     DEMO_SOCK_C_TASK_SIZE      		512

@@ -10,7 +10,7 @@
 
 #include <string.h>
 #include "wm_include.h"
-#include "wm_demo.h"
+//#include "wm_demo.h"
 #include "wm_sockets.h"
 
 #if DEMO_UDP

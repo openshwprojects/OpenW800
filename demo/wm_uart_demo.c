@@ -13,7 +13,7 @@
 #include "wm_http_fwup.h"
 #include "wm_sockets.h"
 #include "wm_cpu.h"
-#include "wm_demo.h"
+//#include "wm_demo.h"
 
 #if DEMO_UARTx
 #include "wm_gpio_afsel.h"

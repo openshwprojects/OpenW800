@@ -1,7 +1,7 @@
 #ifndef _h_MATRIXSSLAPP
 #define _h_MATRIXSSLAPP
 
-#include "wm_demo.h"
+//#include "wm_demo.h"
 
 #if DEMO_SSL_SERVER
 

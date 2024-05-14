@@ -10,7 +10,7 @@
 
 #include <string.h>
 #include "wm_include.h"
-#include "wm_demo.h"
+//#include "wm_demo.h"
 
 #if DEMO_MASTER_SPI
 #include "wm_hostspi.h"

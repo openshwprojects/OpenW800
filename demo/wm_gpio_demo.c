@@ -12,7 +12,7 @@
 * Date : 2014-6-2
 *****************************************************************************/
 #include "wm_include.h"
-#include "wm_demo.h"
+//#include "wm_demo.h"
 
 
 #if DEMO_GPIO 

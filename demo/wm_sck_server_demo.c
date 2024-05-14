@@ -1,6 +1,6 @@
 #include "wm_include.h"
 #include <string.h>
-#include "wm_demo.h"
+//#include "wm_demo.h"
 #include "lwip/errno.h"
 
 

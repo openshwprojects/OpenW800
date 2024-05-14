@@ -1,6 +1,6 @@
 #include <string.h>
 #include "wm_include.h"
-#include "wm_demo.h"
+//#include "wm_demo.h"
 #include "wm_wifi_oneshot.h"
 
 #if DEMO_CONNECT_NET

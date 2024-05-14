@@ -13,7 +13,7 @@
 #include <time.h>
 #include "wm_rtc.h"
 #include "wm_ntp.h"
-#include "wm_demo.h"
+//#include "wm_demo.h"
 
 #if DEMO_NTP
 extern const char DEMO_SET_NTP_S[];

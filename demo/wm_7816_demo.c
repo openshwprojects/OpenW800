@@ -6,7 +6,7 @@
 #include "wm_gpio.h"
 #include "wm_uart.h"
 #include "wm_osal.h"
-#include "wm_demo.h"
+//#include "wm_demo.h"
 
 #if DEMO_7816
 

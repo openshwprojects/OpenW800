@@ -9,7 +9,7 @@
  */
 #include "wm_include.h"
 #include <string.h>
-#include "wm_demo.h"
+//#include "wm_demo.h"
 
 
 #if DEMO_STD_SOCKET_SERVER

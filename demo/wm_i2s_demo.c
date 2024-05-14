@@ -12,7 +12,7 @@
 
 #include "wm_i2s.h"
 #include "wm_include.h"
-#include "wm_demo.h"
+//#include "wm_demo.h"
 #include "wm_gpio_afsel.h"
 
 

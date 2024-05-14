@@ -9,10 +9,10 @@
 *****************************************************************************/
 #include <string.h>
 #include "wm_include.h"
-//#include "wm_demo.h"
+////#include "wm_demo.h"
 
-#if DEMO_CONSOLE
-#include "wm_demo_console.h"
+//#if DEMO_CONSOLE
+//#include "wm_demo_console.h"
 
 #define    DEMO_TASK_SIZE      2048
 static tls_os_queue_t 	*demo_q = NULL;

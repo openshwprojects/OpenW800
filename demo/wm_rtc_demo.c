@@ -1,6 +1,6 @@
 #include <string.h>
 #include "wm_include.h"
-#include "wm_demo.h"
+//#include "wm_demo.h"
 #include "wm_rtc.h"
 
 #if DEMO_RTC

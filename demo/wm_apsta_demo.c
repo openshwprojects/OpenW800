@@ -15,7 +15,7 @@
 #include "wm_include.h"
 #include "lwip/netif.h"
 #include "wm_netif.h"
-#include "wm_demo.h"
+//#include "wm_demo.h"
 #include "wm_sockets.h"
 
 #if DEMO_APSTA
