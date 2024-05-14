@@ -12,7 +12,7 @@
 * Date : 2014-6-14
 *****************************************************************************/ 
 #include "wm_include.h"
-#undef DEMO_CONSOLE
+//#undef DEMO_CONSOLE
 
 extern void user_main();
 void UserMain(void)
@@ -20,9 +20,9 @@ void UserMain(void)
 	printf("\n user task \n");
 
 	user_main();
-#if DEMO_CONSOLE
-	CreateDemoTask();
-#endif
+//#if DEMO_CONSOLE
+//	CreateDemoTask();
+//#endif
 }
 
 

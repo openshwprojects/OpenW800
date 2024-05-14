@@ -120,20 +120,20 @@ typedef struct demo_sys
 {
     char *rxbuf;		   /*uart rx*/
     char *txbuf;		   /*uart tx*/
-    u16 wptr;
-    u16 rptr;
-    u8 dummy1;		      /*not used*/
-    u8 MsgNum;
+ //   u16 wptr;
+ //   u16 rptr;
+ //   u8 dummy1;		      /*not used*/
+ //   u8 MsgNum;
 
 
     bool socket_ok;
     int socket_num;
     char *sock_rx;
-    u16 sock_data_len;
+//    u16 sock_data_len;
 
     int recvlen;		/*socket rx length, used to debug*/
     int translen;		/*socket tx length, used to debug*/
-    u8 dummy2; 			/*not used*/
+    //u8 dummy2; 			/*not used*/
 } ST_Demo_Sys;
 
 void CreateDemoTask(void);

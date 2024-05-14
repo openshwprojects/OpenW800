@@ -9,10 +9,10 @@
 *****************************************************************************/
 #include <string.h>
 #include "wm_include.h"
-////#include "wm_demo.h"
+//#include "wm_demo.h"
 
 //#if DEMO_CONSOLE
-//#include "wm_demo_console.h"
+#include "wm_demo_console.h"
 
 #define    DEMO_TASK_SIZE      2048
 static tls_os_queue_t 	*demo_q = NULL;
@@ -442,18 +442,18 @@ void demo_console_task(void *sdata)
     }
 }
 
-void CreateDemoTask(void)
-{
-    tls_os_queue_create(&demo_q, DEMO_QUEUE_SIZE);
-    tls_os_task_create(NULL, NULL,
-                       demo_console_task,
-                       NULL,
-                       (void *)DemoTaskStk,          /* task's stack start address */
-                       DEMO_TASK_SIZE * sizeof(u32), /* task's stack size, unit:byte */
-                       DEMO_TASK_PRIO,
-                       0);
-}
+//void CreateDemoTask(void)
+//{
+//    tls_os_queue_create(&demo_q, DEMO_QUEUE_SIZE);
+//    tls_os_task_create(NULL, NULL,
+//                       demo_console_task,
+//                       NULL,
+//                       (void *)DemoTaskStk,          /* task's stack start address */
+//                       DEMO_TASK_SIZE * sizeof(u32), /* task's stack size, unit:byte */
+//                       DEMO_TASK_PRIO,
+//                       0);
+//}
 
 
-#endif	//DEMO_CONSOLE
+//#endif DEMO_CONSOLE
 

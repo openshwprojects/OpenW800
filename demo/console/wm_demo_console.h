@@ -7,8 +7,8 @@
 * Copyright (c) 2014 Winner Micro Electronic Design Co., Ltd.
 * All rights reserved.
 *****************************************************************************/
-#ifndef __WM_DEMO_CMD_H__
-#define __WM_DEMO_CMD_H__
+//#ifndef __WM_DEMO_CMD_H__
+//#define __WM_DEMO_CMD_H__
 
 #include <string.h>
 #include "wm_include.h"
@@ -107,8 +107,8 @@ struct demo_console_info_t
     char *info;
 };
 
-#define DEMO_CONSOLE_CMD		1		//±»½âÎö³Écmd
-#define DEMO_CONSOLE_SHORT_CMD	2		//CMDµÄÒ»²¿·Ö£¬Ã»ÓĞ½âÎöÍê
+#define DEMO_CONSOLE_CMD		1		//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½cmd
+#define DEMO_CONSOLE_SHORT_CMD	2		//CMDï¿½ï¿½Ò»ï¿½ï¿½ï¿½Ö£ï¿½Ã»ï¿½Ğ½ï¿½ï¿½ï¿½ï¿½ï¿½
 #define DEMO_CONSOLE_WRONG_CMD  3
 
 #define DEMO_BUF_SIZE		TLS_UART_RX_BUF_SIZE
@@ -283,11 +283,11 @@ struct demo_console_info_t  console_tbl[] =
 	{"t-iperf",  demo_iperf_auto_test,	 0x7E,	  7, "Iperf auto test"},
 #endif
 
-    //¿ØÖÆÌ¨ÉÏÏÔÊ¾µÄ×îºóÒ»¸öÃüÁî£¬Èç¹ûÒªÈÃÃüÁîÏÔÊ¾ÔÚ¿ØÖÆÌ¨ÉÏ£¬ĞèÒª·ÅÔÚ¸ÃĞĞµÄÉÏÃæ
+    //ï¿½ï¿½ï¿½ï¿½Ì¨ï¿½ï¿½ï¿½ï¿½Ê¾ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½î£¬ï¿½ï¿½ï¿½Òªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê¾ï¿½Ú¿ï¿½ï¿½ï¿½Ì¨ï¿½Ï£ï¿½ï¿½ï¿½Òªï¿½ï¿½ï¿½Ú¸ï¿½ï¿½Ğµï¿½ï¿½ï¿½ï¿½ï¿½
     {"demohelp", 	demo_console_show_help,	0, 0,	"Display Help information"},
-    //ÏÂÃæµÄÃüÁîÓÃÓÚÄÚ²¿²âÊÔ£¬²»ÏÔÊ¾ÔÚ¿ØÖÆÌ¨ÉÏ
+    //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ú²ï¿½ï¿½ï¿½ï¿½Ô£ï¿½ï¿½ï¿½ï¿½ï¿½Ê¾ï¿½Ú¿ï¿½ï¿½ï¿½Ì¨ï¿½ï¿½
     {"reset", 		demo_sys_reset, 0, 0, "Reset System"},
-    //×îºóÒ»¸öÃüÁî£¬¼ìË÷ÃüÁîÊ±ÅĞ¶Ï½áÊø±êÊ¶
+    //ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½î£¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê±ï¿½Ğ¶Ï½ï¿½ï¿½ï¿½ï¿½ï¿½Ê¶
     {"lastcmd", 	NULL,	0, 0,			"Table Terminal Flag; MUST BE THE LAST ONE"}
 };
 
