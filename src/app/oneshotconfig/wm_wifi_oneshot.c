@@ -1564,6 +1564,12 @@ void tls_wifi_start_oneshot(void)
 int tls_wifi_set_oneshot_flag(u8 flag)
 {
     bool enable = FALSE;
+//#if TLS_CONFIG_BT
+//	tls_bt_status_t status;
+//    if (flag > 4)
+//#else
+//   if (flag > 3)
+//#endif
     {
         printf("net cfg mode not support\n");
         return -1;
@@ -1593,7 +1599,26 @@ int tls_wifi_set_oneshot_flag(u8 flag)
 			tls_wifi_set_listen_mode(0);
 			tls_wl_plcp_stop();
 		}
-
+#if TLS_CONFIG_BT
+		else if (4 == flag)
+		{
+			status = wm_bt_wifi_cfg_init();
+			if(status != TLS_BT_STATUS_SUCCESS)
+			{
+			    if (gucOneshotPsFlag)
+			    {
+                    gucOneshotPsFlag = 0;
+    		        tls_wifi_set_psflag(TRUE, FALSE);
+    		        tls_wl_if_ps(0);
+			    }
+				return -1;
+			}
+			else
+			{
+                return 0;
+			}
+		}
+#endif
 		else /*udp mode*/
 		{
 			tls_wifi_set_listen_mode(1);
@@ -1614,6 +1639,28 @@ int tls_wifi_set_oneshot_flag(u8 flag)
 			}
 #endif
 		}
+//#if TLS_CONFIG_BT
+		else if (4 == guconeshotflag)
+		{
+			status = wm_bt_wifi_cfg_deinit();
+		    if (gucOneshotPsFlag)
+		    {
+                gucOneshotPsFlag = 0;
+		        tls_wifi_set_psflag(TRUE, FALSE);
+                if (WM_WIFI_DISCONNECTED == tls_wifi_get_state())
+		            tls_wl_if_ps(0);
+		    }
+            guconeshotflag = flag;
+            if(status != TLS_BT_STATUS_SUCCESS)
+            {
+            	return -1;
+            }
+            else
+            {
+                return 0;
+            }
+		}
+//#endif
 		guconeshotflag = flag;
 		tls_wifi_set_listen_mode(0);
 		tls_oneshot_data_clear();
