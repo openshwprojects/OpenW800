@@ -19,7 +19,7 @@
 #define CODE_UPD_START_ADDR					(0x8010000UL)
 
 /**Run-time image header area*/
-#define CODE_RUN_START_ADDR                 (0x8010000UL)
+#define CODE_RUN_START_ADDR                 (0x80D0000UL)
 
 /**Area can be used by User*/
 #define USER_ADDR_START						(0x81C0000UL)

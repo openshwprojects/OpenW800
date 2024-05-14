@@ -40,7 +40,7 @@ if [ $code_encrypt -eq 1 ]
   cat "$ProjName"_enc_key.bin ../../../../../tools/w800/ca/capub_"$prikey_sel"_N.dat > "$ProjName"_enc_key_N.bin  
   ../../../../../../../tools/w800/wm_tool.exe -b ./"$ProjName"_enc_key_N.bin -o ./"$ProjName" -it $img_type -fc 0 -ra 080d0400 -ih 080d0000 -ua 08010000 -nh 0  -un 0
  else
-  ../../../../../../../tools/w800/wm_tool.exe -b ./"$ProjName".bin -o ./"$ProjName" -it $img_type -fc 0 -ra 8010400 -ih 8010000 -ua 08010000 -nh 0  -un 0
+  ../../../../../../../tools/w800/wm_tool.exe -b ./"$ProjName".bin -o ./"$ProjName" -it $img_type -fc 0 -ra 080d0400 -ih 080d0000 -ua 08010000 -nh 0  -un 0
 fi
 
 mkdir -p ../../../../../../../bin/w800
