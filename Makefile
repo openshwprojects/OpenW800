@@ -3,7 +3,8 @@ sinclude $(TOP_DIR)/tools/w800/conf.mk
 
 # Optimization Flags
 CFLAGS += -Os -fdata-sections -ffunction-sections -g0 -flto
-LDFLAGS += --gc-sections -flto -lm
+LDFLAGS += --gc-sections -flto
+LINKFLAGS += -lm
 
 ifndef PDIR # {
 GEN_IMAGES= $(TARGET).elf
@@ -57,7 +58,7 @@ LINKLIB += \
 endif
 
 LINKFLAGS_$(TARGET) =  \
-    $(LINKLIB)
+    $(LINKLIB) -lm
 
 CONFIGURATION_DEFINES =    
 
