@@ -3,7 +3,7 @@ sinclude $(TOP_DIR)/tools/w800/conf.mk
 
 # Optimization Flags
 CFLAGS += -Os -fdata-sections -ffunction-sections -g0 -flto
-LDFLAGS += --gc-sections -flto
+LDFLAGS += --gc-sections -flto -lm
 
 ifndef PDIR # {
 GEN_IMAGES= $(TARGET).elf
