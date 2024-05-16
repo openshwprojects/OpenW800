@@ -343,5 +343,5 @@ int demo_sys_reset(void *p, ...)
     return WM_SUCCESS;
 }
 
-#endif /*__WM_DEMO_CMD_H__*/
+//#endif /*__WM_DEMO_CMD_H__*/
 

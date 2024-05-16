@@ -1,6 +1,10 @@
 TOP_DIR := .
 sinclude $(TOP_DIR)/tools/w800/conf.mk
 
+# Optimization Flags
+CFLAGS += -Os -fdata-sections -ffunction-sections -g0
+LDFLAGS += --gc-sections
+
 ifndef PDIR # {
 GEN_IMAGES= $(TARGET).elf
 GEN_BINS = $(TARGET).bin
@@ -55,15 +59,15 @@ LINKLIB += \
 endif
 
 LINKFLAGS_$(TARGET) =  \
-	$(LINKLIB)
+    $(LINKLIB)
 
-CONFIGURATION_DEFINES =	
+CONFIGURATION_DEFINES =    
 
-DEFINES +=				\
-	$(CONFIGURATION_DEFINES)
+DEFINES +=              \
+    $(CONFIGURATION_DEFINES)
 
-DDEFINES +=				\
-	$(CONFIGURATION_DEFINES)
+DDEFINES +=             \
+    $(CONFIGURATION_DEFINES)
 
 INCLUDES := $(INCLUDES) -I$(PDIR)include
 INCLUDES += -I ./
