@@ -2,7 +2,7 @@ TOP_DIR := .
 sinclude $(TOP_DIR)/tools/w800/conf.mk
 
 # Optimization Flags
-CFLAGS += -Os -fdata-sections -ffunction-sections -g0 -flto
+CFLAGS += -Os -fdata-sections -ffunction-sections -g0 -flto -DDISABLE_BLUETOOTH
 LDFLAGS += --gc-sections -flto
 LINKFLAGS += -lm -lc
 
