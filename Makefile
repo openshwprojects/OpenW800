@@ -2,8 +2,8 @@ TOP_DIR := .
 sinclude $(TOP_DIR)/tools/w800/conf.mk
 
 # Optimization Flags
-CFLAGS += -Os -fdata-sections -ffunction-sections -g0
-LDFLAGS += --gc-sections
+CFLAGS += -Os -fdata-sections -ffunction-sections -g0 -flto
+LDFLAGS += --gc-sections -flto
 
 ifndef PDIR # {
 GEN_IMAGES= $(TARGET).elf
@@ -41,11 +41,9 @@ COMPONENTS_$(TARGET) += \
     $(TOP_DIR)/src/app/libapp$(LIB_EXT)
 endif
 
-
 LINKLIB = 	\
     $(TOP_DIR)/lib/$(CONFIG_ARCH_TYPE)/libwlan$(LIB_EXT) \
     $(TOP_DIR)/lib/$(CONFIG_ARCH_TYPE)/libbt$(LIB_EXT)
-
 
 ifeq ($(USE_LIB), 1)
 LINKLIB += \
