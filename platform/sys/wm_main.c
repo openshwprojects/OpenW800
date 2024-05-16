@@ -106,7 +106,9 @@ extern void *tls_wl_init(u8 *tx_gain, u8* mac_addr, u8 *hwver);
 extern int wpa_supplicant_init(u8 *mac_addr);
 extern void tls_sys_auto_mode_run(void);
 extern void UserMain(void);
+#ifndef DISABLE_BLUETOOTH
 extern void tls_bt_entry();
+#endif
 
 void task_start (void *data);
 
@@ -275,7 +277,7 @@ void task_start (void *data)
 
 	tls_ethernet_init();
 	
-#if TLS_CONFIG_BT
+#ifndef DISABLE_BLUETOOTH
 	tls_bt_entry();
 #endif
 
@@ -311,4 +313,3 @@ void task_start (void *data)
 #endif
     }
 }
-
