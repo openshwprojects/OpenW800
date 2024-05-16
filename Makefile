@@ -27,7 +27,7 @@ SUBDIRS += \
 endif
 endif
 
-COMPONENTS_$(TARGET) =  \
+COMPONENTS_$(TARGET) =	\
     $(TOP_DIR)/app/libuser$(LIB_EXT) #\
     #$(TOP_DIR)/demo/libdemo$(LIB_EXT)
 
@@ -42,11 +42,10 @@ COMPONENTS_$(TARGET) += \
     $(TOP_DIR)/src/app/libapp$(LIB_EXT)
 endif
 
-# Exclude Bluetooth library
-LINKLIB =  \
-    $(TOP_DIR)/lib/$(CONFIG_ARCH_TYPE)/libwlan$(LIB_EXT)
+LINKLIB = 	\
+    $(TOP_DIR)/lib/$(CONFIG_ARCH_TYPE)/libwlan$(LIB_EXT) \
+    $(TOP_DIR)/lib/$(CONFIG_ARCH_TYPE)/libbt$(LIB_EXT)
 
-# If using precompiled libraries, exclude Bluetooth
 ifeq ($(USE_LIB), 1)
 LINKLIB += \
     $(TOP_DIR)/lib/$(CONFIG_ARCH_TYPE)/libapp$(LIB_EXT)         \
