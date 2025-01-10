@@ -21,8 +21,8 @@
 
 /**Host Interface&Command**/
 #define TLS_CONFIG_HOSTIF 								CFG_ON
-#define TLS_CONFIG_AT_CMD								(CFG_ON && TLS_CONFIG_HOSTIF)
-#define TLS_CONFIG_RI_CMD								(CFG_ON && TLS_CONFIG_HOSTIF)
+#define TLS_CONFIG_AT_CMD								(CFG_OFF && TLS_CONFIG_HOSTIF)
+#define TLS_CONFIG_RI_CMD								(CFG_OFF && TLS_CONFIG_HOSTIF)
 #define TLS_CONFIG_RMMS									CFG_ON
 
 //LWIP CONFIG
