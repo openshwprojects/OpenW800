@@ -54,7 +54,7 @@ CRYPTO
 #define TLS_CONFIG_HTTP_CLIENT_AUTH_BASIC				CFG_OFF
 #define TLS_CONFIG_HTTP_CLIENT_AUTH_DIGEST				CFG_OFF
 #define TLS_CONFIG_HTTP_CLIENT_AUTH						(TLS_CONFIG_HTTP_CLIENT_AUTH_BASIC || TLS_CONFIG_HTTP_CLIENT_AUTH_DIGEST)
-#define TLS_CONFIG_HTTP_CLIENT_SECURE					CFG_ON
+#define TLS_CONFIG_HTTP_CLIENT_SECURE					CFG_OFF
 #define TLS_CONFIG_HTTP_CLIENT_TASK						(CFG_ON && TLS_CONFIG_HTTP_CLIENT)
 
 
@@ -66,12 +66,12 @@ CRYPTO
 #define TLS_CONFIG_IGMP            				        CFG_ON
 
 
-#define TLS_CONFIG_NTP 									CFG_ON
+#define TLS_CONFIG_NTP 									CFG_OFF
 
 
 #define TLS_CONFIG_BR_EDR								CFG_OFF
-#define TLS_CONFIG_BLE                                  CFG_ON
-#define TLS_CONFIG_BT_NTO                               CFG_ON
+#define TLS_CONFIG_BLE                                  CFG_OFF
+#define TLS_CONFIG_BT_NTO                               CFG_OFF
 
 #define TLS_CONFIG_BT                                  (TLS_CONFIG_BR_EDR || TLS_CONFIG_BLE)
 
