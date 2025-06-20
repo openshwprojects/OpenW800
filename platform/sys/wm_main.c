@@ -109,6 +109,9 @@ extern void UserMain(void);
 extern void tls_bt_entry();
 
 void task_start (void *data);
+extern u32 __heap_end;
+extern u32 __heap_start;
+void tls_mem_get_init_available_size(void);
 
 /****************/
 /* main program */
@@ -184,6 +187,7 @@ int main(void)
 	csi_vic_set_wakeup_irq(TIMER_IRQn);
 	csi_vic_set_wakeup_irq(WDG_IRQn);
 	/*configure wake up source end*/
+	tls_mem_get_init_available_size();
 
 	{
 		tls_os_task_create(NULL, NULL,
@@ -312,3 +316,21 @@ void task_start (void *data)
     }
 }
 
+
+unsigned int total_mem_size;
+void tls_mem_get_init_available_size(void)
+{
+	u8* p = NULL;
+	total_mem_size = (unsigned int)&__heap_end - (unsigned int)&__heap_start;
+	while(total_mem_size > 512)
+	{
+		p = malloc(total_mem_size);
+		if(p)
+		{
+			free(p);
+			p = NULL;
+			break;
+		}
+		total_mem_size = total_mem_size - 512;
+	}
+}

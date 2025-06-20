@@ -87,7 +87,7 @@ void *pvReturn;
 
 	vTaskSuspendAll();
 	{
-		pvReturn = tls_mem_alloc( xWantedSize );
+		pvReturn = malloc( xWantedSize );
 	}
 	xTaskResumeAll();
 
@@ -111,11 +111,54 @@ void vPortFree( void *pv )
 	{
 		vTaskSuspendAll();
 		{
-			tls_mem_free( pv );
+			free( pv );
 		}
 		xTaskResumeAll();
 	}
 }
+
+void* pvPortRealloc(void* mem, size_t newsize)
+{
+	if(newsize == 0)
+	{
+		vPortFree(mem);
+		return NULL;
+	}
+
+	vTaskSuspendAll();
+	void* p;
+	p = malloc(newsize);
+	if(p)
+	{
+		if(mem != NULL)
+		{
+			memcpy(p, mem, newsize);
+			free(mem);
+		}
+	}
+	xTaskResumeAll();
+	return p;
+}
+
+void* os_realloc(void* ptr, size_t size) __attribute__((alias("pvPortRealloc")));
+
+extern unsigned int total_mem_size;
+
+size_t xPortGetFreeHeapSize(void)
+{
+	return total_mem_size;
+}
+
+void vPortInitialiseBlocks(void)
+{
+	/* This just exists to keep the linker quiet. */
+}
+
+int xPortMemIsKernel(void* mem)
+{
+	return 1;
+}
+
 #endif
 #endif
 

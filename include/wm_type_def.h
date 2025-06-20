@@ -10,9 +10,6 @@
 #ifndef __WM_TYPE_DEF_H__
 #define __WM_TYPE_DEF_H__
 
-#ifdef bool
-#undef bool
-#endif
 #ifdef u8
 #undef u8
 #endif
@@ -53,7 +50,6 @@ typedef unsigned char INT8U;
 #endif
 typedef signed char INT8S;
 
-typedef unsigned char        bool;
 typedef unsigned char        u8;
 typedef signed char          s8;
 typedef unsigned short       u16;
@@ -64,16 +60,6 @@ typedef unsigned long long   u64;
 typedef long long                    s64;
 
 #if 1//(GCC_COMPILE==0)
-#ifdef int32_t
-#undef int32_t
-#endif
-typedef int int32_t;
-
-#ifdef uint32_t
-#undef uint32_t
-#endif
-typedef unsigned int uint32_t;
-
 #endif
 
 #ifdef int32
@@ -106,20 +92,10 @@ typedef unsigned long ULONG;
 #endif
 typedef unsigned char u8_t;
 
-#ifdef uint8_t
-#undef uint8_t
-#endif
-typedef unsigned char uint8_t;
-
 #ifdef u16_t
 #undef u16_t
 #endif
 typedef unsigned short u16_t;
-
-#ifdef uint16_t
-#undef uint16_t
-#endif
-typedef unsigned short uint16_t;
 
 #ifdef u32_t
 #undef u32_t
@@ -141,12 +117,6 @@ typedef signed short s16_t;
 #undef s32_t
 #endif
 typedef signed int s32_t;
-#if (GCC_COMPILE==0)
-#ifdef size_t
-#undef size_t
-#endif
-typedef unsigned int size_t;
-#endif
 
 #ifdef err_t
 #undef err_t
@@ -169,8 +139,45 @@ typedef unsigned int mem_ptr_t;
 #endif
 #define FALSE                    0
 
+#if defined(__MINILIBC__)
+#ifdef bool
+#undef bool
+#endif
 #define true				1
 #define false				0
+typedef unsigned char        bool;
+
+#ifdef uint8_t
+#undef uint8_t
+#endif
+typedef unsigned char uint8_t;
+
+#ifdef uint16_t
+#undef uint16_t
+#endif
+typedef unsigned short uint16_t;
+
+#ifdef uint32_t
+#undef uint32_t
+#endif
+typedef unsigned int uint32_t;
+
+#ifdef int32_t
+#undef int32_t
+#endif
+typedef int int32_t;
+
+#if (GCC_COMPILE==0)
+#ifdef size_t
+#undef size_t
+#endif
+typedef unsigned int size_t;
+#endif
+#else
+#include <stdbool.h>
+#include <stdint.h>
+#define IN_ADDR_T_DEFINED
+#endif
 
 #define WM_SUCCESS               0
 #define WM_FAILED               -1

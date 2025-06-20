@@ -72,7 +72,7 @@ task.h is included from an application file. */
 
 #undef MPU_WRAPPERS_INCLUDED_FROM_API_FILE
 #if TLS_OS_FREERTOS
-#if !configUSE_HEAP3
+#if !configUSE_HEAP3 && !configUSE_HEAP5
 /* Allocate the memory for the heap.  The struct is used to force byte
 alignment without using any non-portable code. */
 static union xRTOS_HEAP

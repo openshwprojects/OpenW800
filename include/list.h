@@ -13,8 +13,8 @@
  * See README and COPYING for more details.
  */
 
-#ifndef LIST_H
-#define LIST_H
+#ifndef COMMON_LIST_H
+#define COMMON_LIST_H
 
 #include <stdio.h>
 
@@ -314,4 +314,4 @@ static __inline unsigned int dl_list_len(struct dl_list *list)
  * @}
  */
 
-#endif /* LIST_H */
+#endif /* COMMON_LIST_H */

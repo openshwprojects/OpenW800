@@ -55,21 +55,21 @@ TOOL_CHAIN_PATH = $(subst ",,$(CONFIG_W800_TOOLCHAIN_PATH))
 
 # select which tools to use as compiler, librarian and linker
 ifeq ($(VERBOSE),YES)
-    AR = $(TOOL_CHAIN_PATH)csky-elfabiv2-ar
-    ASM = $(TOOL_CHAIN_PATH)csky-elfabiv2-gcc
-    CC = $(TOOL_CHAIN_PATH)csky-elfabiv2-gcc
-    CPP = $(TOOL_CHAIN_PATH)csky-elfabiv2-g++
-    LINK = $(TOOL_CHAIN_PATH)csky-elfabiv2-ld
-    OBJCOPY = $(TOOL_CHAIN_PATH)csky-elfabiv2-objcopy
-    OBJDUMP = $(TOOL_CHAIN_PATH)csky-elfabiv2-objdump
+    AR = $(TOOL_CHAIN_PATH)csky-abiv2-elf-ar
+    ASM = $(TOOL_CHAIN_PATH)csky-abiv2-elf-gcc
+    CC = $(TOOL_CHAIN_PATH)csky-abiv2-elf-gcc
+    CPP = $(TOOL_CHAIN_PATH)csky-abiv2-elf-g++
+    LINK = $(TOOL_CHAIN_PATH)csky-abiv2-elf-ld
+    OBJCOPY = $(TOOL_CHAIN_PATH)csky-abiv2-elf-objcopy
+    OBJDUMP = $(TOOL_CHAIN_PATH)csky-abiv2-elf-objdump
 else
-    AR = @echo "AR $<" 2>/dev/null; $(TOOL_CHAIN_PATH)csky-elfabiv2-ar
-    ASM = @echo "ASM $<"; $(TOOL_CHAIN_PATH)csky-elfabiv2-gcc
-    CC = @echo "CC  $<"; $(TOOL_CHAIN_PATH)csky-elfabiv2-gcc
-    CPP = @echo "CPP $<"; $(TOOL_CHAIN_PATH)csky-elfabiv2-g++
-    LINK = @echo "LINK $<"; $(TOOL_CHAIN_PATH)csky-elfabiv2-ld
-    OBJCOPY = @echo "OBJCOPY $<"; $(TOOL_CHAIN_PATH)csky-elfabiv2-objcopy
-    OBJDUMP = @echo "OBJDUMP $<"; $(TOOL_CHAIN_PATH)csky-elfabiv2-objdump
+    AR = @echo "AR $<" 2>/dev/null; $(TOOL_CHAIN_PATH)csky-abiv2-elf-ar
+    ASM = @echo "ASM $<"; $(TOOL_CHAIN_PATH)csky-abiv2-elf-gcc
+    CC = @echo "CC  $<"; $(TOOL_CHAIN_PATH)csky-abiv2-elf-gcc
+    CPP = @echo "CPP $<"; $(TOOL_CHAIN_PATH)csky-abiv2-elf-g++
+    LINK = @echo "LINK $<"; $(TOOL_CHAIN_PATH)csky-abiv2-elf-ld
+    OBJCOPY = @echo "OBJCOPY $<"; $(TOOL_CHAIN_PATH)csky-abiv2-elf-objcopy
+    OBJDUMP = @echo "OBJDUMP $<"; $(TOOL_CHAIN_PATH)csky-abiv2-elf-objdump
 endif
 
 LDDIR = $(TOP_DIR)/ld/$(CONFIG_ARCH_TYPE)

@@ -1,7 +1,7 @@
 #ifndef __PING_H__
 #define __PING_H__
 
-#define TLS_CONFIG_WIFI_PING_TEST   (CFG_ON && TLS_CONFIG_HOSTIF)
+#define TLS_CONFIG_WIFI_PING_TEST   (CFG_OFF && TLS_CONFIG_HOSTIF)
 
 #if TLS_CONFIG_WIFI_PING_TEST
 struct ping_param{

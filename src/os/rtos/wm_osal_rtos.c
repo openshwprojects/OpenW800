@@ -1162,6 +1162,10 @@ void tls_os_disp_task_stat_info(void)
 
 void tls_os_init(void *arg)
 {
+#if configUSE_HEAP5
+	extern void vPortInitialiseBlocks(void);
+	vPortInitialiseBlocks();
+#endif
 }
 /*
 *********************************************************************************************************

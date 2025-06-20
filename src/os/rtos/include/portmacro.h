@@ -186,7 +186,7 @@ extern portLONG pendsvflag;
 
 #define portYIELD_FROM_ISR( a )     portEND_SWITCHING_ISR( a )
 
-#define configASSERT( a )   do {if ((a)==0){printf("Assert : %s %d\r\n", __FILE__, __LINE__);while(1);}}while(0)
+//#define configASSERT( a )   do {if ((a)==0){printf("Assert : %s %d\r\n", __FILE__, __LINE__);while(1);}}while(0)
 
 
 #ifdef __cplusplus

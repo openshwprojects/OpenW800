@@ -104,9 +104,9 @@ static u8 airchantype[TOTAL_CHAN_NUM]={0,0,0,0,0,0,0,0,0,0,0,0,0, 0,0, 0};
 static u8 uctotalchannum = 0;
 static u8 scanChanErr = 0;
 
-static tls_os_sem_t	*gWifiRecvSem = NULL;
-
 #endif
+
+static tls_os_sem_t* gWifiRecvSem = NULL;
 
 #if TLS_CONFIG_AP_MODE_ONESHOT
 static u8 gucRawValid = 0;

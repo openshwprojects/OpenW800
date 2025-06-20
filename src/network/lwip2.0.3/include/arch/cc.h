@@ -5,7 +5,9 @@
 #include <stdio.h>
 
 /* Define platform endianness */
+#ifndef BYTE_ORDER
 #define BYTE_ORDER LITTLE_ENDIAN
+#endif
 #include "wm_type_def.h"
 #if 0 // remove by kevin 140612
 /* The unsigned data types */

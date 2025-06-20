@@ -328,7 +328,7 @@ u32 adc_get_offset(void)
 	adc_offset = tls_read_adc_result(); //获取adc转换结果
 	tls_adc_stop(0);
 
-	printf("\r\noffset:%d\r\n", adc_offset);
+	//printf("\r\noffset:%d\r\n", adc_offset);
     return adc_offset;
 }
 
