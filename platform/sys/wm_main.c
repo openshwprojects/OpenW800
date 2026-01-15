@@ -117,11 +117,11 @@ void tls_mem_get_init_available_size(void);
 /* main program */
 /****************/
 
-void vApplicationIdleHook( void )
-{
-	__WAIT();
-    return;
-}
+//void vApplicationIdleHook( void )
+//{
+//	__WAIT();
+//    return;
+//}
 
 void wm_gpio_config()
 {
