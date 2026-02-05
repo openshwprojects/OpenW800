@@ -1,12 +1,15 @@
 CSRCS ?= $(wildcard *.c)
 ASRCS ?= $(wildcard *.S)
+CPPSRCS ?=
 
 SUBDIRS ?= $(patsubst %/,%,$(dir $(wildcard */Makefile)))
 
 OBJS := $(CSRCS:%.c=$(OBJODIR)/$(notdir $(shell pwd))/%.o) \
-        $(ASRCS:%.S=$(OBJODIR)/$(notdir $(shell pwd))/%.o)
+        $(ASRCS:%.S=$(OBJODIR)/$(notdir $(shell pwd))/%.o) \
+	$(CPPSRCS:%.cpp=$(OBJODIR)/$(notdir $(shell pwd))/%.o)
 
 OBJS-DEPS := $(patsubst %.c, $(OBJODIR)/$(notdir $(shell pwd))/%.o.d, $(CSRCS))
+OBJS-DEPS += $(patsubst %.cpp, $(OBJODIR)/$(notdir $(shell pwd))/%.o.d, $(CPPSRCS))
 
 OLIBS := $(GEN_LIBS:%=$(LIBODIR)/%)
 
@@ -15,6 +18,21 @@ OIMAGES := $(GEN_IMAGES:%=$(IMAGEODIR)/%)
 OBINS := $(GEN_BINS:%=$(BINODIR)/%)
 
 CFLAGS = $(CCFLAGS) $(DEFINES) $(EXTRA_CCFLAGS) $(INCLUDES)
+CXXFLAGS += -Wall \
+    -DTLS_CONFIG_CPU_XT804=1 \
+    -DGCC_COMPILE=1 \
+    -DPLATFORM_W800=1 \
+    -mcpu=ck804ef \
+    $(optimization) \
+    -std=gnu++11 \
+    -c  \
+    -mhard-float  \
+    -Wall  \
+    -fdata-sections  \
+    -ffunction-sections \
+    -fno-rtti \
+    -fno-exceptions \
+    $(DEFINES) $(EXTRA_CCFLAGS) $(INCLUDES)
 
 define ShortcutRule
 $(1): .subdirs $(2)/$(1)
@@ -36,7 +54,7 @@ DEP_LIBS_$(1) = $$(foreach lib,$$(filter %$(LIB_EXT),$$(COMPONENTS_$(1))),$$(LIB
 DEP_OBJS_$(1) = $$(foreach obj,$$(filter %.o,$$(COMPONENTS_$(1))),$$(OBJODIR)/$$(notdir $$(obj)))
 $$(IMAGEODIR)/$(1).elf: $$(OBJS) $$(DEP_OBJS_$(1)) $$(DEP_LIBS_$(1)) $$(DEPENDS_$(1))
 	@mkdir -p $$(IMAGEODIR)
-	$(CC) -Wl,--gc-sections -Wl,-zmax-page-size=1024 -Wl,--whole-archive $$(OBJS) $$(DEP_OBJS_$(1)) $$(DEP_LIBS_$(1)) $$(if $$(LINKFLAGS_$(1)),$$(LINKFLAGS_$(1))) -Wl,--no-whole-archive $(LINKFLAGS) $(MAP) -o $$@
+	$(CC) -Wl,--gc-sections -Wl,-zmax-page-size=1024 -Wl,--whole-archive $$(OBJS) $$(DEP_OBJS_$(1)) $$(DEP_LIBS_$(1)) $$(if $$(LINKFLAGS_$(1)),$$(LINKFLAGS_$(1))) -Wl,--no-whole-archive $(LINKFLAGS) -lstdc++ $(MAP) -o $$@
 endef
 
 $(BINODIR)/%.bin: $(IMAGEODIR)/%.elf
@@ -152,6 +170,13 @@ endif
 $(OBJODIR)/$(notdir $(shell pwd))/%.o: %.c
 	@mkdir -p $(dir $(@))
 	$(CC) $(if $(findstring $<,$(DSRCS)),$(DFLAGS),$(CFLAGS)) $(COPTS_$(*F)) $(INCLUDES) $(CMACRO) -c "$<" -o "$@" -MMD -MD -MF "$(@:$(OBJODIR)/$(notdir $(shell pwd))/%.o=$(OBJODIR)/$(notdir $(shell pwd))/%.o.d)" -MT "$(@)"
+
+$(OBJODIR)/$(notdir $(shell pwd))/%.o: %.cpp
+	@mkdir -p $(dir $(@))
+	$(CPP) $(CXXFLAGS) $(COPTS_$(*F)) $(INCLUDES) $(CMACRO) \
+	-c "$<" -o "$@" \
+	-MMD -MD -MF "$(@:$(OBJODIR)/$(notdir $(shell pwd))/%.o=$(OBJODIR)/$(notdir $(shell pwd))/%.o.d)" \
+	-MT "$(@)"
 
 $(OBJODIR)/$(notdir $(shell pwd))/%.o: %.S
 	@mkdir -p $(OBJODIR)/$(notdir $(shell pwd))
